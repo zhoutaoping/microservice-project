@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 spring:
   jpa:
@@ -12,7 +12,7 @@ spring:
     username: root
     password: 123
   application:
-    name: microservice-provide-user
+    name: microservice-provider-user
 logging:
   level:
     root: INFO
@@ -22,8 +22,8 @@ logging:
     com.ztp: DEBUG
 eureka:
   client:
-    service-url:
-      default-zone: http://localhost:8761/eureka
+    serviceUrl:
+      defaultZone: http://ztp:123456@localhost:8761/eureka
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
